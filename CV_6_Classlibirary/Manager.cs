@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CV_6_Classlibirary
+{
+    public class Manager : MonthlySalaryEmployee
+    {
+        public Manager(string _name, int _age) : base(_name, _age, 80000)
+        {
+            
+        }
+
+
+        
+        public override double GetSalary()
+        {
+            return this.MonthlySalary + (this.Age * 500) + this.GetBonus();
+        }
+        public override void PrintInfo()
+        {
+            Console.WriteLine(Name + " " + Age + "  Pozice: manager"  ) ;
+        }
+    }
+}
